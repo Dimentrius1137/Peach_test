@@ -1,0 +1,69 @@
+@use 'layout';
+
+.pin{
+    width: 100%;
+    @include layout.flex(column, center, center, "");
+    &__container{
+        margin-top: 50px;
+        width: 100%;
+        height: 140px;
+        @include layout.flex(row, center, start, 16px);
+        @media(max-width: 430px){
+            height: 450px;
+            display: grid;
+            grid-template-columns: 120px 120px ;
+            grid-template-rows: 126px 126px;
+   
+            gap: 10px 43px;
+            justify-content: center;
+        }
+    }
+    &__content{
+        @include layout.flex(column, center, center, "");
+        width: 178px;
+        height: 140px;
+        @media(max-width: 430px){
+            width: 120px;
+            height: 108px;
+        }
+    }
+    &__content--last{
+        @include layout.flex(column, center, center, "");
+        width: 100%;
+        @media(max-width: 430px){
+            grid-column: span 2 !important
+        }
+
+    }
+
+    &__img-container{
+        @include layout.flex("", center, center, "");
+        width: 110px;
+        height: 110px;
+       
+    }
+    &__main-title{
+        margin-top: 180px;
+        text-align: center;
+        font-size: 56px;
+        font-family: 'proximanovacond_bold';
+        @media(max-width: 430px){
+          font-size: 28px;
+          margin-top: 74px;
+        }
+    }
+    &__title{
+        margin-top: 145px;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'proximanovacond_bold';
+        @media(max-width: 430px){
+          font-size: 22px;
+          margin-top: 48px;
+        }
+    }
+    &__title--red{
+        color: rgba(176, 23, 54, 1);
+        margin: 0;
+    }
+}

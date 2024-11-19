@@ -1,0 +1,114 @@
+@use 'layout';
+
+.card{
+    width: 100%;
+    margin-top: 100px;
+    @media(max-width: 430px){
+        margin-top: 50px;
+    }
+    &__title{
+        text-align: center !important;
+        font-size: 56px;
+        font-family: 'proximanovacond_bold';
+        @media(max-width: 430px){
+          font-size: 28px;
+        }
+    }
+    &__container{
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(2, 615px);
+        grid-template-rows: repeat(3, 260px);
+        gap: 20px;
+        @media(max-width: 430px){
+            margin-top: 15px;
+            @include layout.flex(column, "", "", 10px)
+        }
+    }
+}
+
+.block{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    @media(max-width: 430px){
+        width: 100%;
+        height: 60px;
+    };
+    &__content{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.3s ease-out;
+        transform: translateY(180px);
+        @media(max-width: 430px){
+            transform: translateY(0px);
+        }
+    }
+
+    &__content-title{
+        width: 100%;
+        color: white;
+        padding: 27px 20px 20px;
+        @include layout.flex(row, space-between, "", 0px);
+        @media(max-width: 430px){
+            transform: translateY(0px);
+            padding-top: 21px;
+            font-size: 20px;
+        }
+    }
+    &__content-pin{
+        display: none;
+        transition: all 0.3s ease-out;
+        @media(max-width: 430px){
+            display: inline-block;
+        }
+    }
+    &__content-text{
+        max-width: 480px;
+        color: white;
+        margin-left: 20px;
+        font-size: 17px;
+    }
+
+}
+.block:hover{
+    .block__content{
+        transform: translateY(0px);
+    }
+}
+.block--open{
+    @media(max-width: 430px){
+        height: 240px;
+    }
+
+}
+.block__content-pin--open{
+    transform: rotateZ(180deg);
+}
+
+.block:nth-child(1){
+    background: url('../../images/cards/card1.png');
+    background-position: center;
+}
+.block:nth-child(2){
+    background: url('../../images/cards/card2.png');
+    background-position: center;
+}
+.block:nth-child(3){
+    background: url('../../images/cards/card3.png');
+    background-position: center;
+}
+.block:nth-child(4){
+    background: url('../../images/cards/card4.png');
+    background-position: center;
+}
+.block:nth-child(5){
+    background: url('../../images/cards/card5.png');
+    background-position: center;
+}
+.block:nth-child(6){
+    background: url('../../images/cards/card6.png');
+    background-position: center;
+}

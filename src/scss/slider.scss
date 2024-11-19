@@ -1,0 +1,89 @@
+.slider__title{
+    margin-top: 100px;
+    margin-bottom: 50px !important;
+    @media(max-width: 430px){
+        margin-top: 74px;
+      }
+}
+.splide{
+    width: 1110px;
+    height: 834px;
+    padding: 0 !important;
+    margin-top: 80px;
+    margin-bottom: 301px;
+    @media(max-width: 430px)
+    {   
+        width: 280px;
+        height: 210px;
+        margin-top: 0;
+    }
+}
+.splide__pagination {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex; 
+    justify-content: start !important;
+    align-items: end;
+    flex-direction: row;
+    white-space:nowrap;
+    padding: 0;
+    top: 1100px;
+    @media(max-width: 430px)
+    {
+        display: none !important;
+    }
+}
+.splide__pagination button {
+    width: 214px; 
+    height: 6px; 
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer; 
+}
+.splide__pagination button.is-active {
+    width: 214px !important;
+    background-color: rgba(163, 12, 51, 1); /* Цвет активной кнопки */
+    transform: scale(1) !important;
+}
+.splide__track{
+    width: 1110px;
+    height: 834px;
+    @media(max-width: 430px)
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+.title{
+    margin-top: 103px;
+    margin-bottom: 58px;
+    text-align: start !important;
+    @media(max-width: 430px)
+    {
+        margin-top: 0;
+        margin-bottom: 15px !important;
+    }
+}
+.splide__arrow{
+    position: absolute;
+    top: 140px !important;
+    background: none;
+    @media(max-width: 430px)
+    {
+        display: none !important;
+    }
+}
+.splide__arrow--prev{
+    position: absolute;
+    left: 1000px !important;
+    background: none;
+}
+.splide__slide{
+    width: 100%;
+    height: 100%;
+}
+.slide__img{
+    width: 100%;
+    height: 100%;
+}
