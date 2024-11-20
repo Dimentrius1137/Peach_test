@@ -9,13 +9,11 @@
         height: 140px;
         @include layout.flex(row, center, center, 16px);
         @media(max-width: 430px){
-            height: 450px;
+            height: 300px;
             display: grid;
             grid-template-columns: 120px 120px ;
-            grid-template-rows: 126px 126px;
-   
-            gap: 10px 43px;
-            justify-content: center;
+            grid-template-rows: 108px 108px;
+            align-items: center;
         }
     }
     &__content{
@@ -42,7 +40,16 @@
         @include layout.flex("", center, center, "");
         width: 110px;
         height: 110px;
-       
+        @media(max-width: 430px){
+            width: 80px;
+            height: 80px;
+          }
+    }
+    &__img{
+        @media(max-width: 430px){
+            max-width: 35px;
+            max-height: 35px;
+          }
     }
     &__main-title{
         margin-top: 180px;
@@ -61,7 +68,7 @@
         font-family: 'proximanovacond_bold';
         @media(max-width: 430px){
           font-size: 22px;
-          margin-top: 48px;
+          margin-top: 102px;
         }
     }
     &__title--red{
